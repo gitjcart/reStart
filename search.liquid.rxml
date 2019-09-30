@@ -1,6 +1,6 @@
 <div id="searchresults">  
   <form action="/search" method="get">
-    <p><input type="text" name="q" value="{{search.terms  | escape}}" id="result-q" /> <input type="submit" value="Search" style="width:100px" /></p>
+    <p><input type="text" name="q" value="{{search.terms  | escape}}" id="result-q" /> <input type="submit" value="Search" style="width:15em" /></p>
   </form>
   
   {% if search.performed %}
@@ -8,7 +8,7 @@
     {% paginate search.results by 10 %}  
   
     {% if search.results == empty %}  
-      <p>Your search for "{{search.terms | escape}}" did not yield any results</p>              
+      <p>It doesn't look like we have "{{search.terms | escape}}", would you like to try another search?</p>              
     {% else %}  
 
         <ol>
