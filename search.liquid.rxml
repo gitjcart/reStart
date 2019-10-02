@@ -8,10 +8,10 @@
     {% paginate search.results by 10 %}  
   
     {% if search.results == empty %}  
-      <p class="no-result">Aww shucks, we don't have "{{search.terms | escape}}" in our inventory.</p>              
-       <p class="no-result">Try searching for another great product such as:  </p>
-         <a href="https://www.guintherscustomcuts.com/products/guinthers-smoked-bacon" class="no-result1">Guinther's Smoked Bacon!</a>
-          <p><a href="https://www.guintherscustomcuts.com/products/guinthers-smoked-bacon"> <img src="http://cdn.shopify.com/s/files/1/0068/0401/3107/products/bacon_1200x1200.png?v=1565300176" alt="Guinther's Smoked Bacon" height="300" width="500"></a></p>
+      <p class="no-result1">Aww shucks, we don't have "{{search.terms | escape}}" in our inventory.</p>              
+       <p class="no-result">Try this awesome product :  </p>
+         <p class="no-result"><a href="https://www.guintherscustomcuts.com/products/guinthers-smoked-bacon" class="no-result1">Guinther's Smoked Bacon!</a></p>
+          <p class="no-result"><a href="https://www.guintherscustomcuts.com/products/guinthers-smoked-bacon"> <img src="https://cdn.shopify.com/s/files/1/0068/0401/3107/products/bacon_1200x1200.png?v=1565300176" alt="Guinther's Smoked Bacon" height="300" width="500"></a></p>
   {% else %}  
 
         <ol>
