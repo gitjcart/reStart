@@ -15,7 +15,7 @@
            <p class="no-result"><a href="https://www.guintherscustomcuts.com/products/guinthers-smoked-bacon" class="no-result">$4.99 / 12oz package </a></p>
             <div class="product-single__add-to-cart{% if section.settings.add_to_cart_button_size == 'large' %} product-single__add-to-cart--full-width{% endif %}">
                 <button type="submit" name="add" id="AddToCart--{{ section.id }}" class="btn btn--add-to-cart{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}"{% unless current_variant.available %}{% endunless %}>
-                  <span class="btn__text1">
+                  <span class="btn__text">
                     {% if item.available %}
                       {{ 'products.product.add_to_cart' | t }}
                     {% else %}
