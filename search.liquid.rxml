@@ -8,24 +8,21 @@
     {% paginate search.results by 10 %}  
   
     {% if search.results == empty %}  
-      <p class="no-result1">Aww shucks, we don't have "{{search.terms | escape}}" in our inventory.</p>              
+  <p class="no-result1">Aww shucks, we don't have <b>"{{search.terms | escape}}"</b> in our inventory.</p>              
        <p class="no-result1">Try this awesome product :  </p>
          <p class="no-result"><a href="https://www.guintherscustomcuts.com/products/guinthers-smoked-bacon" class="no-result">Guinther's Smoked Bacon!</a></p>
           <p class="no-result"><a href="https://www.guintherscustomcuts.com/products/guinthers-smoked-bacon"> <img src="https://cdn.shopify.com/s/files/1/0068/0401/3107/products/bacon_1200x1200.png?v=1565300176" alt="Guinther's Smoked Bacon" height="300" width="500"></a></p>
            <p class="no-result"><a href="https://www.guintherscustomcuts.com/products/guinthers-smoked-bacon" class="no-result">$4.99 / 12oz package </a></p>
             <div class="product-single__add-to-cart{% if section.settings.add_to_cart_button_size == 'large' %} product-single__add-to-cart--full-width{% endif %}">
-                <button type="submit" name="add" id="AddToCart--{{ section.id }}" class="btn btn--add-to-cart{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}"{% unless current_variant.available %} disabled="disabled"{% endunless %}>
-                  <span class="btn__text">
-                    {% if current_variant.available %}
+                <button type="submit" name="add" id="AddToCart--{{ section.id }}" class="btn btn--add-to-cart{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}"{% unless current_variant.available %}{% endunless %}>
+                  <span class="btn__text1">
+                    {% if item.available %}
                       {{ 'products.product.add_to_cart' | t }}
                     {% else %}
                       {{ 'products.product.add_to_cart' | t }}
                     {% endif %}
                   </span>
                 </button>
-                {% if section.settings.enable_payment_button %}
-                  {{ form | payment_button }}
-                {% endif %}
               </div>
 
      {% else %}  
